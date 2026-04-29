@@ -1,41 +1,26 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_bzero.c                                         :+:      :+:    :+:   */
+/*   ft_putendl_fd.c                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: jtravanc <jtravanc@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2026/04/14 14:18:34 by jtravanc          #+#    #+#             */
-/*   Updated: 2026/04/29 15:30:54 by jtravanc         ###   ########.fr       */
+/*   Created: 2026/04/27 16:28:00 by jtravanc          #+#    #+#             */
+/*   Updated: 2026/04/29 15:32:33 by jtravanc         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-
-void	ft_bzero(void *s, size_t n)
+void ft_putendl_fd(char *s, int fd)
 {
-	unsigned char	*str;
+    int i;
 
-	*str = (unsigned char *)s;
-	while (n)
-	{
-		*str = '\0';
-		n--;
-		str++;
-	}
+    i = 0;
+
+    while (s[i] != '\0')
+    {
+        write (fd, &s[i], 1);
+        i++;
+    }
+    write (1, "\n", 1);
 }
-
-/*  #include <stdio.h>
-int main (void)
-{
-	char str[] = "APagar letras";
-	char str2[] = "APagar letras";
-
-	size_t size = 1;
-	printf("A string antes %s\n", str);
-	bzero(str, size);
-	ft_bzero(str2, size);
-	printf("A string fica %s\n", str);
-	printf("A string fica %s\n", str2);
-
-} */

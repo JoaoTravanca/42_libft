@@ -1,17 +1,17 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strlcpy.c                                       :+:      :+:    :+:   */
+/*   ft_strdup.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: jtravanc <jtravanc@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2026/04/15 16:06:57 by jtravanc          #+#    #+#             */
-/*   Updated: 2026/04/29 15:33:25 by jtravanc         ###   ########.fr       */
+/*   Created: 2026/04/20 17:22:38 by jtravanc          #+#    #+#             */
+/*   Updated: 2026/04/29 15:32:58 by jtravanc         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-static size_t	ft_strlen(const char *s)
+static size_t	ft_strlen (const char *s)
 {
 	size_t	i;
 
@@ -21,33 +21,29 @@ static size_t	ft_strlen(const char *s)
 	return (i);
 }
 
-size_t	ft_strlcpy(char *dst, const char *src, size_t size)
+char *ft_strdup(const char *s)
 {
-	size_t	i;
-	
-	i = 0;
-	if (size == 0)
-	{
-		return (ft_strlen(src));
-	}
-	while ((i < size - 1) && (src[i] != '\0'))
-	{
-		dst[i] = src[i];
-		i++;
-	}
-	dst[i] = '\0';
-	return (ft_strlen(src));
+    char *dst;
+    int i;
+
+    dst = malloc (ft_strlen((s)+ 1) * sizeof (char));
+    i = 0;
+    while (s[i] != '\0')
+    {
+        dst[i] = s[i];
+        i++;
+    }
+    dst[i] = '\0';
+    return (dst);
 }
 
-/* #include <stdio.h>
 int main (void)
 {
-	char src[] = "ISTO E UM TESTE";
-	char dst [15];
+    char *str = "Um teste divertido";
+    char *new = ft_strdup(str);
 
-	size_t	i = 5;
-
-	ft_strlcpy (dst, src, i);
-	printf("dest = %s", dst);
-	return (0);
-} */
+    printf("str: %s\n", str);
+    printf("new: %s\n", new);
+    free (new);
+    return (0);
+}

@@ -6,11 +6,11 @@
 /*   By: jtravanc <jtravanc@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/04/14 15:57:21 by jtravanc          #+#    #+#             */
-/*   Updated: 2026/04/14 18:20:18 by jtravanc         ###   ########.fr       */
+/*   Updated: 2026/04/29 15:31:55 by jtravanc         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <string.h>
+#include "libft.h"
 
 void	*ft_memmove(void *dest, const void *src, size_t n)
 {

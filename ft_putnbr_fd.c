@@ -1,41 +1,32 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_bzero.c                                         :+:      :+:    :+:   */
+/*   ft_putnbr_fd.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: jtravanc <jtravanc@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2026/04/14 14:18:34 by jtravanc          #+#    #+#             */
-/*   Updated: 2026/04/29 15:30:54 by jtravanc         ###   ########.fr       */
+/*   Created: 2026/04/27 16:36:46 by jtravanc          #+#    #+#             */
+/*   Updated: 2026/04/29 15:32:37 by jtravanc         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-
-void	ft_bzero(void *s, size_t n)
+void ft_putnbr_fd(int n, int fd)
 {
-	unsigned char	*str;
+    long long nb;
+    char numero;
 
-	*str = (unsigned char *)s;
-	while (n)
-	{
-		*str = '\0';
-		n--;
-		str++;
-	}
+    nb = n;
+
+    if (nb < 0)
+        {
+        write (fd, "-", 1);
+        nb = -nb;    
+        }
+    if (nb >= 10)
+    {
+        ft_putnbr_fd(nb / 10, fd);
+    }
+    numero = (nb % 10) + '0';
+    write(fd, &c, 1);
 }
-
-/*  #include <stdio.h>
-int main (void)
-{
-	char str[] = "APagar letras";
-	char str2[] = "APagar letras";
-
-	size_t size = 1;
-	printf("A string antes %s\n", str);
-	bzero(str, size);
-	ft_bzero(str2, size);
-	printf("A string fica %s\n", str);
-	printf("A string fica %s\n", str2);
-
-} */

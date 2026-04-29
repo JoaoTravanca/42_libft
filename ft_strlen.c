@@ -6,11 +6,11 @@
 /*   By: jtravanc <jtravanc@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/04/14 14:18:49 by jtravanc          #+#    #+#             */
-/*   Updated: 2026/04/17 15:57:25 by jtravanc         ###   ########.fr       */
+/*   Updated: 2026/04/29 15:33:33 by jtravanc         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <unistd.h>
+#include "libft.h"
 size_t	ft_strlen (const char *s)
 {
 	size_t	i;
@@ -20,8 +20,6 @@ size_t	ft_strlen (const char *s)
 		i++;
 	return (i);
 }
-
-#include <stdio.h>
 
 int main (void)
 {

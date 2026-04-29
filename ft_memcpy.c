@@ -6,19 +6,21 @@
 /*   By: jtravanc <jtravanc@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/04/14 14:18:41 by jtravanc          #+#    #+#             */
-/*   Updated: 2026/04/16 19:17:02 by jtravanc         ###   ########.fr       */
+/*   Updated: 2026/04/29 15:31:52 by jtravanc         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <string.h>
+#include "libft.h"
 
 void	*ft_memcpy(void *dest, const void *src, size_t n)
 {
 	unsigned char	*dest2;
 	unsigned char	*src2;
 
-	*dest2 = (unsigned char *)dest;
-	*src2 = (unsigned char *)src;
+	dest2 = (unsigned char *)dest;
+	src2 = (unsigned char *)src;
+	if (!dest && !src)
+        return (NULL);
 	while (n)
 	{
 		*dest2 = *src2;

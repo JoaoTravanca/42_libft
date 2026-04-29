@@ -6,10 +6,11 @@
 /*   By: jtravanc <jtravanc@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/04/15 19:06:45 by jtravanc          #+#    #+#             */
-/*   Updated: 2026/04/16 16:26:57 by jtravanc         ###   ########.fr       */
+/*   Updated: 2026/04/29 15:35:08 by jtravanc         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+#include "libft.h"
 int	ft_toupper (int c)
 {
 	if (c >= 97 && c <= 122)

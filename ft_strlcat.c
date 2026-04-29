@@ -6,11 +6,11 @@
 /*   By: jtravanc <jtravanc@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/04/15 17:15:50 by jtravanc          #+#    #+#             */
-/*   Updated: 2026/04/16 18:16:48 by jtravanc         ###   ########.fr       */
+/*   Updated: 2026/04/29 15:33:22 by jtravanc         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
- #include <string.h>
+#include "libft.h"
 
 static size_t	ft_strlen (const char *s)
 {

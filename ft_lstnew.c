@@ -1,41 +1,35 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_bzero.c                                         :+:      :+:    :+:   */
+/*   ft_lstnew.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: jtravanc <jtravanc@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2026/04/14 14:18:34 by jtravanc          #+#    #+#             */
-/*   Updated: 2026/04/29 15:30:54 by jtravanc         ###   ########.fr       */
+/*   Created: 2026/04/27 16:49:38 by jtravanc          #+#    #+#             */
+/*   Updated: 2026/04/29 11:29:42 by jtravanc         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	ft_bzero(void *s, size_t n)
+t_list *ft_lstnew(void *content)
 {
-	unsigned char	*str;
+	t_list  *lista;
 
-	*str = (unsigned char *)s;
-	while (n)
-	{
-		*str = '\0';
-		n--;
-		str++;
-	}
+	lista = malloc(sizeof(*lista));
+	if (!lista)
+		return (NULL);
+	lista -> content = content;
+	lista -> next = NULL;
+	return (lista);
 }
 
-/*  #include <stdio.h>
 int main (void)
 {
-	char str[] = "APagar letras";
-	char str2[] = "APagar letras";
+	char *str = "ola";
+	t_list *lista = ft_lstnew(str);
 
-	size_t size = 1;
-	printf("A string antes %s\n", str);
-	bzero(str, size);
-	ft_bzero(str2, size);
-	printf("A string fica %s\n", str);
-	printf("A string fica %s\n", str2);
-
-} */
+	printf("%s\n", (char *)lista->content);
+	free(lista);
+	return (0);
+}
