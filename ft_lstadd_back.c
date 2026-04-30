@@ -6,15 +6,15 @@
 /*   By: jtravanc <jtravanc@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/04/28 15:54:20 by jtravanc          #+#    #+#             */
-/*   Updated: 2026/04/29 14:09:51 by jtravanc         ###   ########.fr       */
+/*   Updated: 2026/04/30 18:38:23 by jtravanc         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-static t_list *ft_lstnew(void *content)
+static t_list	*ft_lstnew(void *content)
 {
-	t_list  *lista;
+	t_list	*lista;
 
 	lista = malloc(sizeof(*lista));
 	if (!lista)
@@ -24,7 +24,7 @@ static t_list *ft_lstnew(void *content)
 	return (lista);
 }
 
-static t_list *ft_lstlast(t_list *lst)
+static t_list	*ft_lstlast(t_list *lst)
 {
 	if (!lst)
 		return (NULL);
@@ -33,24 +33,23 @@ static t_list *ft_lstlast(t_list *lst)
 	return (lst);
 }
 
-void ft_lstadd_back(t_list **lst, t_list *new)
+void	ft_lstadd_back(t_list **lst, t_list *new)
 {
-	t_list *last;
-	
+	t_list	*last;
+
 	if (!lst || !new)
-		return;
-	
+		return ;
 	if (*lst == NULL)
 	{
 		*lst = new;
-		return;
+		return ;
 	}
 	last = ft_lstlast(*lst);
-	last ->next = new;
-	return;
+	last -> next = new;
+	return ;
 }
 
-int main (void)
+/* int main (void)
 {
 	char *str1 = "primeiro";
 	char *str2 = "segundo";
@@ -65,11 +64,12 @@ int main (void)
 	
 	ft_lstadd_back (&lista1, lista3);
 	printf("O conteudo da lista1 continua a ser: %s\n", (char *)lista1->content);
-    printf("O conteudo do ultimo node e: %s\n", (char *)ft_lstlast(lista1)->content);
+    printf("O conteudo do ultimo 
+	node e: %s\n", (char *)ft_lstlast(lista1)->content);
 	
 	
 	free (lista1);
 	free (lista2);
 	free (lista3);
 	return (0);
-}
+} */

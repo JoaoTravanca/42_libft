@@ -6,51 +6,47 @@
 /*   By: jtravanc <jtravanc@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/04/28 17:48:39 by jtravanc          #+#    #+#             */
-/*   Updated: 2026/04/29 15:28:46 by jtravanc         ###   ########.fr       */
+/*   Updated: 2026/04/30 18:48:11 by jtravanc         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-static char *ft_strdup (char *s)
+static t_list	*ft_lstnew(void *content)
 {
-
-	
-}
-static t_list *ft_lstnew(void *content)
-{
-	t_list  *lista;
+	t_list	*lista;
 
 	lista = malloc(sizeof(*lista));
 	if (!lista)
 		return (NULL);
-	lista -> content = content;
-	lista -> next = NULL;
+	lista->content = content;
+	lista->next = NULL;
 	return (lista);
 }
-static t_list *ft_lstlast(t_list *lst)
+
+static t_list	*ft_lstlast(t_list *lst)
 {
 	if (!lst)
 		return (NULL);
-	while (lst -> next != NULL)
-		lst = lst -> next;
+	while (lst->next)
+		lst = lst->next;
 	return (lst);
 }
 
- static void ft_del (void *content)
+static void	ft_del(void *content)
 {
-	free (content);
+	free(content);
 }
- 
-void ft_lstdelone(t_list *lst, void (*del)(void*))
+
+void	ft_lstdelone(t_list *lst, void (*del)(void*))
 {
 	if (!lst || !del)
 		return ;
-	del (lst -> content);
-	free (lst);
+	del(lst->content);
+	free(lst);
 }
 
-int main (void)
+/* int main (void)
 {
 	char *str1 = "ola";
 	char *str2 = "mundo";
@@ -70,4 +66,4 @@ int main (void)
 	free (lista1);
 	free (lista3);
 	return (0);
-}
+} */

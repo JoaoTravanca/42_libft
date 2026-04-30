@@ -6,46 +6,49 @@
 /*   By: jtravanc <jtravanc@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/04/20 17:35:39 by jtravanc          #+#    #+#             */
-/*   Updated: 2026/04/29 15:30:58 by jtravanc         ###   ########.fr       */
+/*   Updated: 2026/04/30 18:26:49 by jtravanc         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-static void	*ft_memset(void *s, int c, size_t n)
+/* static void    *ft_memset(void *s, int c, size_t n)
 {
-	unsigned char	*str;
-	unsigned char	l;
-	void			*origin;
+    unsigned char   *ptr;
 
-	str = (unsigned char *)s;
-	l = (unsigned char *)c;
-	origin = s;
-	while (n)
-	{
-		*str = l;
-		str++;
-		n--;
-	}
-	return ((void *) origin);
-}
+    ptr = (unsigned char *)s;
+    while (n > 0)
+    {
+        *ptr++ = (unsigned char)c;
+        n--;
+    }
+    return (s);
+} */
 
-void	*ft_calloc(size_t nmemb, size_t size)
+void    *ft_calloc(size_t nmemb, size_t size)
 {
-	void	*ptr;
+    void    *ptr;
+    size_t  total_size;
 
-	if (nmemb == 0 || size == 0)
-		return (malloc(0));
-	if (nmemb != 0 && size > ((size_t)-1 / nmemb))
-		return (NULL);
-	ptr = malloc(nmemb * size);
-	if (!ptr)
-		return (NULL);
-	ft_memset(ptr, 0, nmemb * size);
-	return (ptr);
+    if (nmemb == 0 || size == 0)
+    {
+        nmemb = 1;
+        size = 1;
+    }
+    
+    if (size != 0 && nmemb > ((size_t)-1 / size))
+        return (NULL);
+        
+    total_size = nmemb * size;
+    ptr = malloc(total_size);
+    if (!ptr)
+        return (NULL);
+        
+    ft_memset(ptr, 0, total_size);
+    return (ptr);
 }
-
-/* #include <stdio.h>
+/* 
+#include <stdio.h>
 
 int main (void)
 {

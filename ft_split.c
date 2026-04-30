@@ -6,7 +6,7 @@
 /*   By: jtravanc <jtravanc@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/04/23 15:38:36 by jtravanc          #+#    #+#             */
-/*   Updated: 2026/04/29 15:32:48 by jtravanc         ###   ########.fr       */
+/*   Updated: 2026/04/30 14:50:43 by jtravanc         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -116,3 +116,37 @@ int main (void)
     }
     return (0);
 }
+/* 
+FUNÇÃO split(s, c):
+
+  1. SE s é NULL → retorna NULL
+
+  2. words = count_words(s, c)
+     result = malloc de (words + 1) ponteiros   ← +1 para o NULL final
+
+  3. SE malloc falhou → retorna NULL
+
+  4. i = 0
+     ENQUANTO *s != '\0':
+
+       a. Saltar todos os separadores c
+          (avança s enquanto *s == c)
+
+       b. SE chegámos ao fim da string → sair do loop
+
+       c. Encontrar o fim da palavra atual
+          start = s
+          Avançar s enquanto *s != c E *s != '\0'
+          len = s - start        ← comprimento da palavra
+
+       d. result[i] = malloc de (len + 1) bytes
+          SE malloc falhou → free_all(result, i) e retorna NULL
+
+       e. memcpy(result[i], start, len)
+          result[i][len] = '\0'  ← terminar a string
+
+       f. i++
+
+  5. result[i] = NULL             ← sentinela final obrigatória
+
+  6. retorna result */

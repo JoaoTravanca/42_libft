@@ -6,11 +6,12 @@
 /*   By: jtravanc <jtravanc@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/04/13 13:49:30 by jtravanc          #+#    #+#             */
-/*   Updated: 2026/04/29 15:31:07 by jtravanc         ###   ########.fr       */
+/*   Updated: 2026/04/30 18:30:27 by jtravanc         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
+
 int	ft_isdigit(int c)
 {
 	if (c >= '0' && c <= '9')

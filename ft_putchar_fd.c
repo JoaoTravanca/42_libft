@@ -6,12 +6,19 @@
 /*   By: jtravanc <jtravanc@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/04/27 16:21:53 by jtravanc          #+#    #+#             */
-/*   Updated: 2026/04/29 15:32:01 by jtravanc         ###   ########.fr       */
+/*   Updated: 2026/04/30 18:52:51 by jtravanc         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-void ft_putchar_fd(char c, int fd)
+
+void	ft_putchar_fd(char c, int fd)
 {
-    write (fd, &c, 1);
+	write (fd, &c, 1);
 }
+
+/* int main (void)
+{
+	ft_putchar_fd ('G', 1);
+	return (0);
+} */

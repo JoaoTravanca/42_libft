@@ -6,11 +6,12 @@
 /*   By: jtravanc <jtravanc@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/04/13 14:21:29 by jtravanc          #+#    #+#             */
-/*   Updated: 2026/04/29 15:31:09 by jtravanc         ###   ########.fr       */
+/*   Updated: 2026/04/30 18:30:38 by jtravanc         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
+
 int	ft_isprint(int c)
 {
 	if (c < 32 || c > 126)

@@ -6,7 +6,7 @@
 /*   By: jtravanc <jtravanc@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/04/20 16:52:04 by jtravanc          #+#    #+#             */
-/*   Updated: 2026/04/29 15:30:39 by jtravanc         ###   ########.fr       */
+/*   Updated: 2026/04/30 18:06:41 by jtravanc         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -36,9 +36,7 @@ int	ft_atoi(const char *nptr)
 	return (sign * result);
 }
 
-/* #include <stdio.h>
-
-int main (void)
+/* int main (void)
 {
     char str[] = "        -34937";
 
@@ -47,4 +45,4 @@ int main (void)
     printf ("O resultado e %d\n", num);
     
     return (0);
-} */
+}  */
