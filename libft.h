@@ -5,13 +5,13 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: jtravanc <jtravanc@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2026/04/21 14:59:52 by jtravanc          #+#    #+#             */
-/*   Updated: 2026/04/30 18:09:30 by jtravanc         ###   ########.fr       */
+/*   Created: 2026/05/01 15:09:57 by jtravanc          #+#    #+#             */
+/*   Updated: 2026/05/01 15:09:59 by jtravanc         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef LIBFT_H
-#define LIBFT_H
+# define LIBFT_H
 
 #include <unistd.h>
 #include <stdlib.h>

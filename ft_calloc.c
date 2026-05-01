@@ -6,24 +6,11 @@
 /*   By: jtravanc <jtravanc@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/04/20 17:35:39 by jtravanc          #+#    #+#             */
-/*   Updated: 2026/04/30 18:26:49 by jtravanc         ###   ########.fr       */
+/*   Updated: 2026/05/01 16:43:27 by jtravanc         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-
-/* static void    *ft_memset(void *s, int c, size_t n)
-{
-    unsigned char   *ptr;
-
-    ptr = (unsigned char *)s;
-    while (n > 0)
-    {
-        *ptr++ = (unsigned char)c;
-        n--;
-    }
-    return (s);
-} */
 
 void    *ft_calloc(size_t nmemb, size_t size)
 {

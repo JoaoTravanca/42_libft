@@ -6,22 +6,11 @@
 /*   By: jtravanc <jtravanc@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/04/28 15:41:09 by jtravanc          #+#    #+#             */
-/*   Updated: 2026/04/30 19:07:21 by jtravanc         ###   ########.fr       */
+/*   Updated: 2026/05/01 17:37:26 by jtravanc         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-
-static t_list	*ft_lstnew (void *content)
-{
-	t_list *new;
-	new = malloc (sizeof(*new));
-	if (!new)
-		return (NULL);
-	new -> content = content;
-	new -> next = NULL;
-	return (new);
-}
 
 t_list	*ft_lstlast(t_list *lst)
 {

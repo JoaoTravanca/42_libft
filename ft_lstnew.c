@@ -6,7 +6,7 @@
 /*   By: jtravanc <jtravanc@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/04/27 16:49:38 by jtravanc          #+#    #+#             */
-/*   Updated: 2026/04/29 11:29:42 by jtravanc         ###   ########.fr       */
+/*   Updated: 2026/05/01 17:11:10 by jtravanc         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,7 +24,7 @@ t_list *ft_lstnew(void *content)
 	return (lista);
 }
 
-int main (void)
+/* int main (void)
 {
 	char *str = "ola";
 	t_list *lista = ft_lstnew(str);
@@ -32,4 +32,4 @@ int main (void)
 	printf("%s\n", (char *)lista->content);
 	free(lista);
 	return (0);
-}
+} */

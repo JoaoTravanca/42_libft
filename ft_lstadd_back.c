@@ -6,32 +6,11 @@
 /*   By: jtravanc <jtravanc@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/04/28 15:54:20 by jtravanc          #+#    #+#             */
-/*   Updated: 2026/04/30 18:38:23 by jtravanc         ###   ########.fr       */
+/*   Updated: 2026/05/01 17:31:44 by jtravanc         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-
-static t_list	*ft_lstnew(void *content)
-{
-	t_list	*lista;
-
-	lista = malloc(sizeof(*lista));
-	if (!lista)
-		return (NULL);
-	lista -> content = content;
-	lista -> next = NULL;
-	return (lista);
-}
-
-static t_list	*ft_lstlast(t_list *lst)
-{
-	if (!lst)
-		return (NULL);
-	while (lst -> next != NULL)
-		lst = lst -> next;
-	return (lst);
-}
 
 void	ft_lstadd_back(t_list **lst, t_list *new)
 {
@@ -64,8 +43,8 @@ void	ft_lstadd_back(t_list **lst, t_list *new)
 	
 	ft_lstadd_back (&lista1, lista3);
 	printf("O conteudo da lista1 continua a ser: %s\n", (char *)lista1->content);
-    printf("O conteudo do ultimo 
-	node e: %s\n", (char *)ft_lstlast(lista1)->content);
+    //printf("O conteudo do ultimo 
+	//node e: %s\n", (char *)ft_lstlast(lista1)->content);
 	
 	
 	free (lista1);

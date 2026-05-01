@@ -6,20 +6,11 @@
 /*   By: jtravanc <jtravanc@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/04/15 16:06:57 by jtravanc          #+#    #+#             */
-/*   Updated: 2026/04/29 15:33:25 by jtravanc         ###   ########.fr       */
+/*   Updated: 2026/05/01 17:12:21 by jtravanc         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-static size_t	ft_strlen(const char *s)
-{
-	size_t	i;
-
-	i = 0;
-	while(s[i] != '\0')
-		i++;
-	return (i);
-}
 
 size_t	ft_strlcpy(char *dst, const char *src, size_t size)
 {
@@ -39,7 +30,6 @@ size_t	ft_strlcpy(char *dst, const char *src, size_t size)
 	return (ft_strlen(src));
 }
 
-/* #include <stdio.h>
 int main (void)
 {
 	char src[] = "ISTO E UM TESTE";
@@ -50,4 +40,4 @@ int main (void)
 	ft_strlcpy (dst, src, i);
 	printf("dest = %s", dst);
 	return (0);
-} */
+}

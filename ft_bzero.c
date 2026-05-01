@@ -6,7 +6,7 @@
 /*   By: jtravanc <jtravanc@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/04/14 14:18:34 by jtravanc          #+#    #+#             */
-/*   Updated: 2026/04/29 15:30:54 by jtravanc         ###   ########.fr       */
+/*   Updated: 2026/05/01 15:20:37 by jtravanc         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,7 @@ void	ft_bzero(void *s, size_t n)
 {
 	unsigned char	*str;
 
-	*str = (unsigned char *)s;
+	str = (unsigned char *)s;
 	while (n)
 	{
 		*str = '\0';
@@ -25,7 +25,7 @@ void	ft_bzero(void *s, size_t n)
 	}
 }
 
-/*  #include <stdio.h>
+/*   #include <stdio.h>
 int main (void)
 {
 	char str[] = "APagar letras";

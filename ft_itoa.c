@@ -6,13 +6,13 @@
 /*   By: jtravanc <jtravanc@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/04/24 15:41:59 by jtravanc          #+#    #+#             */
-/*   Updated: 2026/04/30 18:35:34 by jtravanc         ###   ########.fr       */
+/*   Updated: 2026/05/01 16:43:47 by jtravanc         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-/* static int	ft_nbr_len(int n)
+static int	ft_nbr_len(int n)
 {
 	int		count;
 	long	c;
@@ -27,7 +27,7 @@
 		count++;
 	}
 	return (count);
-} */
+}
 
 char	*ft_itoa(int n)
 {

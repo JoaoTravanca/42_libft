@@ -6,7 +6,7 @@
 /*   By: jtravanc <jtravanc@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/04/14 14:18:49 by jtravanc          #+#    #+#             */
-/*   Updated: 2026/04/29 15:33:33 by jtravanc         ###   ########.fr       */
+/*   Updated: 2026/05/01 17:13:47 by jtravanc         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,11 +21,11 @@ size_t	ft_strlen (const char *s)
 	return (i);
 }
 
-int main (void)
+/* int main (void)
 {
 	char *str = "Ola mundo";
 
 	size_t tamanho = ft_strlen (str);
 	printf("O tamanho da string e de %zu caracteres", tamanho);
 	return (0);
-}
+} */

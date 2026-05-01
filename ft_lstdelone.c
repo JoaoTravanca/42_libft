@@ -6,37 +6,16 @@
 /*   By: jtravanc <jtravanc@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/04/28 17:48:39 by jtravanc          #+#    #+#             */
-/*   Updated: 2026/04/30 18:48:11 by jtravanc         ###   ########.fr       */
+/*   Updated: 2026/05/01 17:35:18 by jtravanc         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-static t_list	*ft_lstnew(void *content)
-{
-	t_list	*lista;
-
-	lista = malloc(sizeof(*lista));
-	if (!lista)
-		return (NULL);
-	lista->content = content;
-	lista->next = NULL;
-	return (lista);
-}
-
-static t_list	*ft_lstlast(t_list *lst)
-{
-	if (!lst)
-		return (NULL);
-	while (lst->next)
-		lst = lst->next;
-	return (lst);
-}
-
-static void	ft_del(void *content)
+/* static void	ft_del(void *content)
 {
 	free(content);
-}
+} */
 
 void	ft_lstdelone(t_list *lst, void (*del)(void*))
 {

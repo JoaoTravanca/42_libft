@@ -6,22 +6,27 @@
 /*   By: jtravanc <jtravanc@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/04/29 15:30:17 by jtravanc          #+#    #+#             */
-/*   Updated: 2026/04/30 19:07:04 by jtravanc         ###   ########.fr       */
+/*   Updated: 2026/05/01 18:04:44 by jtravanc         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-static t_list	*ft_lstnew(void *content)
+static void ft_myfunction(void *content)
 {
-	t_list  *lista;
+	char	*str;
 
-	lista = malloc(sizeof(*lista));
-	if (!lista)
-		return (NULL);
-	lista -> content = content;
-	lista -> next = NULL;
-	return (lista);
+	str = (char *) content;
+	while (*str >= 'a' && *str <= 'z')
+	{
+		*str =  *str - 32;
+		str++;
+	}
+}
+
+static void	ft_del(void *content)
+{
+	free(content);
 }
 
 t_list	*ft_lstmap(t_list *lst, void *(*f)(void *), void (*del)(void *))
@@ -49,11 +54,25 @@ t_list	*ft_lstmap(t_list *lst, void *(*f)(void *), void (*del)(void *))
 
 int main (void)
 {
-	char *str1;
-	char *str2;
-	char *str3;
+	char *str1 = "OLA";
+	char *str2 = "mundo";
+	char *str3 = "diversao";
 
-	t_list *lista1;
-	t_list *lista2;
-	t_list *lista3;
+	t_list *lista1 = ft_lstnew(str1);
+	t_list *lista2 = ft_lstnew(str2);
+	t_list *lista3 = ft_lstnew(str3);
+	t_list *new = ft_lstmap (lista1, ft_myfunction, ft_del);
+	lista1->next = lista2;
+	lista2->next = lista3;
+	printf("conteudo da lista1 %s", (char *) lista1 -> conteudo);
+	printf("conteudo da lista2 %s", (char *) lista2 -> conteudo);
+	printf("conteudo da lista3 %s", (char *) lista3 -> conteudo);
+
+	while (*new != NULL)
+	{
+		printf("conteudo da lista new %s", new -> conteudo);
+		new = new -> next;
+	}
+
+	return (0);	
 }
