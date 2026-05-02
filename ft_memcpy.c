@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_memcpy.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: jtravanc <jtravanc@student.42.fr>          +#+  +:+       +#+        */
+/*   By: jtravanca <jtravanca@student.42.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/04/14 14:18:41 by jtravanc          #+#    #+#             */
-/*   Updated: 2026/04/29 15:31:52 by jtravanc         ###   ########.fr       */
+/*   Updated: 2026/05/02 18:00:00 by jtravanca        ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,7 +20,7 @@ void	*ft_memcpy(void *dest, const void *src, size_t n)
 	dest2 = (unsigned char *)dest;
 	src2 = (unsigned char *)src;
 	if (!dest && !src)
-        return (NULL);
+		return (NULL);
 	while (n)
 	{
 		*dest2 = *src2;

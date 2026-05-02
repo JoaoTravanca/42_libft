@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_lstmap.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: jtravanc <jtravanc@student.42.fr>          +#+  +:+       +#+        */
+/*   By: jtravanca <jtravanca@student.42.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/04/29 15:30:17 by jtravanc          #+#    #+#             */
-/*   Updated: 2026/05/01 18:04:44 by jtravanc         ###   ########.fr       */
+/*   Updated: 2026/05/02 17:57:21 by jtravanca        ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -52,27 +52,39 @@ t_list	*ft_lstmap(t_list *lst, void *(*f)(void *), void (*del)(void *))
 	return (new);
 }
 
-int main (void)
+int main(void)
 {
-	char *str1 = "OLA";
-	char *str2 = "mundo";
-	char *str3 = "diversao";
 
-	t_list *lista1 = ft_lstnew(str1);
-	t_list *lista2 = ft_lstnew(str2);
-	t_list *lista3 = ft_lstnew(str3);
-	t_list *new = ft_lstmap (lista1, ft_myfunction, ft_del);
-	lista1->next = lista2;
-	lista2->next = lista3;
-	printf("conteudo da lista1 %s", (char *) lista1 -> conteudo);
-	printf("conteudo da lista2 %s", (char *) lista2 -> conteudo);
-	printf("conteudo da lista3 %s", (char *) lista3 -> conteudo);
+    t_list *original = NULL;
+    ft_lstadd_back(&original, ft_lstnew(strdup("hello")));
+    ft_lstadd_back(&original, ft_lstnew(strdup("world")));
+    ft_lstadd_back(&original, ft_lstnew(strdup("42")));
 
-	while (*new != NULL)
-	{
-		printf("conteudo da lista new %s", new -> conteudo);
-		new = new -> next;
-	}
+    print_list(original, "original");
 
-	return (0);	
+
+    t_list *mapped = ft_lstmap(original, to_upper, del);
+
+    print_list(mapped,   "mapped  ");
+
+ a
+    print_list(original, "original após map");
+
+
+    ft_lstclear(&original, del);
+    ft_lstclear(&mapped,   del);
+
+    return (0);
+}
+
+void    print_list(t_list *lst, const char *label)
+{
+    printf("%s: ", label);
+    while (lst)
+    {
+        printf("[%s]", (char *)lst->content);
+        if (lst->next) printf(" -> ");
+        lst = lst->next;
+    }
+    printf("\n");
 }

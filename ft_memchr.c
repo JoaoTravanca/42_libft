@@ -3,31 +3,31 @@
 /*                                                        :::      ::::::::   */
 /*   ft_memchr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: jtravanc <jtravanc@student.42.fr>          +#+  +:+       +#+        */
+/*   By: jtravanca <jtravanca@student.42.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/04/17 16:43:16 by jtravanc          #+#    #+#             */
-/*   Updated: 2026/04/29 15:31:46 by jtravanc         ###   ########.fr       */
+/*   Updated: 2026/05/02 17:58:57 by jtravanca        ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void *ft_memchr(const void *s, int c, size_t n)
+void	*ft_memchr(const void *s, int c, size_t n)
 {
-    unsigned char *str;
+	unsigned char	*str;
 
-    str = (unsigned char *)s;
-
-    while(*str && n > 0)
-    {
-        if (*str == (unsigned char) c)
-            return ((void *) str);
-        str++;
-        n--;
-    }
-    return (NULL);
+	str = (unsigned char *)s;
+	while (*str && n > 0)
+	{
+		if (*str == (unsigned char) c)
+			return ((void *) str);
+		str++;
+		n--;
+	}
+	return (NULL);
 }
 
+/*
 #include <stdio.h>
 int main (void)
 {
@@ -39,3 +39,4 @@ int main (void)
     printf("O endereco do caracter e %p\n", memchr(str, letter, bytes));
     return (0);
 }
+*/
