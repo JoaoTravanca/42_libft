@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strtrim.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: jtravanc <jtravanc@student.42.fr>          +#+  +:+       +#+        */
+/*   By: jtravanca <jtravanca@student.42.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/04/21 18:36:26 by jtravanc          #+#    #+#             */
-/*   Updated: 2026/05/04 16:13:46 by jtravanc         ###   ########.fr       */
+/*   Updated: 2026/05/04 19:31:26 by jtravanca        ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -48,6 +48,7 @@ char	*ft_strtrim(char const *s1, char const *set)
 	new = malloc(sizeof(char) * (end - start + 1));
 	if (!new)
 		return (NULL);
+	new = ft_substr (s1, start, ft_strlen (new));
 	return (ft_strncpy_custom(new, s1, start, end - 1));
 }
 

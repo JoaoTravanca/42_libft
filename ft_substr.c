@@ -6,7 +6,7 @@
 /*   By: jtravanca <jtravanca@student.42.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/04/21 15:07:00 by jtravanc          #+#    #+#             */
-/*   Updated: 2026/05/02 17:48:47 by jtravanca        ###   ########.fr       */
+/*   Updated: 2026/05/04 19:36:22 by jtravanca        ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,7 +34,7 @@ char	*ft_substr(char const *s, unsigned int start, size_t len)
 	return (dst);
 }
 
-/* #include <stdio.h>
+ #include <stdio.h>
 
 int main (void)
 {
@@ -48,4 +48,4 @@ int main (void)
 
     free (str);
     return (0);
-} */
+}
