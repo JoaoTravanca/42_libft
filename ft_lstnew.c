@@ -6,15 +6,15 @@
 /*   By: jtravanc <jtravanc@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/04/27 16:49:38 by jtravanc          #+#    #+#             */
-/*   Updated: 2026/05/01 17:11:10 by jtravanc         ###   ########.fr       */
+/*   Updated: 2026/05/04 15:51:51 by jtravanc         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-t_list *ft_lstnew(void *content)
+t_list	*ft_lstnew(void *content)
 {
-	t_list  *lista;
+	t_list	*lista;
 
 	lista = malloc(sizeof(*lista));
 	if (!lista)

@@ -6,7 +6,7 @@
 /*   By: jtravanc <jtravanc@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/04/23 15:38:36 by jtravanc          #+#    #+#             */
-/*   Updated: 2026/05/01 16:43:06 by jtravanc         ###   ########.fr       */
+/*   Updated: 2026/05/04 16:09:38 by jtravanc         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -87,7 +87,7 @@ char	**ft_split(char const *s, char c)
 	return (result);
 }
 
-int main (void)
+/* int main (void)
 {
     char *src = "isto nao foi nada divertido xd";
     char c = ' ';
@@ -106,4 +106,4 @@ int main (void)
     }
 	result[i] = NULL;
     return (0);
-}
+} */

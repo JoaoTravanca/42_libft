@@ -6,33 +6,30 @@
 /*   By: jtravanc <jtravanc@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/04/20 17:35:39 by jtravanc          #+#    #+#             */
-/*   Updated: 2026/05/01 16:43:27 by jtravanc         ###   ########.fr       */
+/*   Updated: 2026/05/04 16:03:37 by jtravanc         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void    *ft_calloc(size_t nmemb, size_t size)
+void	*ft_calloc(size_t nmemb, size_t size)
 {
-    void    *ptr;
-    size_t  total_size;
+	void	*ptr;
+	size_t	total_size;
 
-    if (nmemb == 0 || size == 0)
-    {
-        nmemb = 1;
-        size = 1;
-    }
-    
-    if (size != 0 && nmemb > ((size_t)-1 / size))
-        return (NULL);
-        
-    total_size = nmemb * size;
-    ptr = malloc(total_size);
-    if (!ptr)
-        return (NULL);
-        
-    ft_memset(ptr, 0, total_size);
-    return (ptr);
+	if (nmemb == 0 || size == 0)
+	{
+		nmemb = 1;
+		size = 1;
+	}
+	if (size != 0 && nmemb > ((size_t)-1 / size))
+		return (NULL);
+	total_size = nmemb * size;
+	ptr = malloc(total_size);
+	if (!ptr)
+		return (NULL);
+	ft_memset(ptr, 0, total_size);
+	return (ptr);
 }
 /* 
 #include <stdio.h>

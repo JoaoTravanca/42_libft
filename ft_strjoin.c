@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strjoin.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: jtravanca <jtravanca@student.42.fr>        +#+  +:+       +#+        */
+/*   By: jtravanc <jtravanc@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/04/21 17:35:32 by jtravanc          #+#    #+#             */
-/*   Updated: 2026/05/03 16:49:23 by jtravanca        ###   ########.fr       */
+/*   Updated: 2026/05/04 16:10:46 by jtravanc         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,7 +20,7 @@ char	*ft_strjoin(char const *s1, char const *s2)
 
 	if (!s1 || !s2)
 		return (NULL);
-	new = malloc (((ft_strlen (s1)) + (ft_strlen (s2))  + 1) * sizeof (char));
+	new = malloc (((ft_strlen (s1)) + (ft_strlen (s2)) + 1) * sizeof (char));
 	if (!new)
 		return (NULL);
 	i = 0;
@@ -38,7 +38,7 @@ char	*ft_strjoin(char const *s1, char const *s2)
 	return (new);
 }
 
-#include <stdio.h>
+/* #include <stdio.h>
 int main (void)
 {
 	char *s1 = "PARTE UM";
@@ -46,4 +46,4 @@ int main (void)
 	char *new = ft_strjoin (s1, s2);
 	printf("teste - %s\n", new);
 	return (0);
-}
+} */

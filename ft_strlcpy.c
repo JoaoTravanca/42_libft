@@ -6,7 +6,7 @@
 /*   By: jtravanc <jtravanc@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/04/15 16:06:57 by jtravanc          #+#    #+#             */
-/*   Updated: 2026/05/01 17:12:21 by jtravanc         ###   ########.fr       */
+/*   Updated: 2026/05/04 15:48:48 by jtravanc         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,7 @@
 size_t	ft_strlcpy(char *dst, const char *src, size_t size)
 {
 	size_t	i;
-	
+
 	i = 0;
 	if (size == 0)
 	{
@@ -30,14 +30,13 @@ size_t	ft_strlcpy(char *dst, const char *src, size_t size)
 	return (ft_strlen(src));
 }
 
-int main (void)
+/* int main (void)
 {
 	char src[] = "ISTO E UM TESTE";
 	char dst [15];
 
 	size_t	i = 5;
-
 	ft_strlcpy (dst, src, i);
 	printf("dest = %s", dst);
 	return (0);
-}
+} */
