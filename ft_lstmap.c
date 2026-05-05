@@ -3,25 +3,32 @@
 /*                                                        :::      ::::::::   */
 /*   ft_lstmap.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: jtravanca <jtravanca@student.42.fr>        +#+  +:+       +#+        */
+/*   By: jtravanc <jtravanc@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/04/29 15:30:17 by jtravanc          #+#    #+#             */
-/*   Updated: 2026/05/02 17:57:21 by jtravanca        ###   ########.fr       */
+/*   Updated: 2026/05/05 18:30:31 by jtravanc         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-static void ft_myfunction(void *content)
+static void	*ft_myfunction(void *content)
 {
 	char	*str;
+	int	i;
+	char *new;
 
 	str = (char *) content;
-	while (*str >= 'a' && *str <= 'z')
+	new = ft_strdup(str);
+	i = 0;
+	while (str[i] != '\0')
 	{
-		*str =  *str - 32;
-		str++;
+		if (str[i] >= 'a' && str[i] <= 'z')
+			new[i] = str[i] - 32;
+		i++;
 	}
+	
+	return ((void *) new);
 }
 
 static void	ft_del(void *content)
@@ -31,9 +38,9 @@ static void	ft_del(void *content)
 
 t_list	*ft_lstmap(t_list *lst, void *(*f)(void *), void (*del)(void *))
 {
-	t_list *new;
-	t_list *node;
-	 
+	t_list	*new;
+	t_list	*node;
+
 	if (!lst || !f || !del)
 		return (NULL);
 	node = NULL;
@@ -54,37 +61,53 @@ t_list	*ft_lstmap(t_list *lst, void *(*f)(void *), void (*del)(void *))
 
 int main(void)
 {
+    t_list *lista1 = ft_lstnew(ft_strdup("Hello"));
+    t_list *lista2 = ft_lstnew(ft_strdup("World"));
+    t_list *lista3 = ft_lstnew(ft_strdup("12345"));
+    t_list *new;
+    t_list *tmp;
 
-    t_list *original = NULL;
-    ft_lstadd_back(&original, ft_lstnew(strdup("hello")));
-    ft_lstadd_back(&original, ft_lstnew(strdup("world")));
-    ft_lstadd_back(&original, ft_lstnew(strdup("42")));
+    lista1->next = lista2;
+    lista2->next = lista3;
 
-    print_list(original, "original");
+    printf("O conteudo da lista 1 e %s\n", (char *) lista1->content);
+    printf("O conteudo da lista 2 e %s\n", (char *) lista2->content);
+    printf("O conteudo da lista 3 e %s\n", (char *) lista3->content);
 
-
-    t_list *mapped = ft_lstmap(original, to_upper, del);
-
-    print_list(mapped,   "mapped  ");
-
- a
-    print_list(original, "original após map");
-
-
-    ft_lstclear(&original, del);
-    ft_lstclear(&mapped,   del);
-
-    return (0);
-}
-
-void    print_list(t_list *lst, const char *label)
-{
-    printf("%s: ", label);
-    while (lst)
+    new = ft_lstmap(lista1, ft_myfunction, ft_del);
+    tmp = new;
+    while (tmp)
     {
-        printf("[%s]", (char *)lst->content);
-        if (lst->next) printf(" -> ");
-        lst = lst->next;
+        printf("O elemento da lista passou a ser %s\n", (char *) tmp->content);
+        tmp = tmp->next;
     }
-    printf("\n");
+
+    printf("----------------------------------------\n");
+    printf("Teste para saber se a lista esta intacta\n");
+    printf("O conteudo da lista 1 e %s\n", (char *) lista1->content);
+    printf("O conteudo da lista 2 e %s\n", (char *) lista2->content);
+    printf("O conteudo da lista 3 e %s\n", (char *) lista3->content);
+
+    printf("--- TESTES ---\n");
+    new = ft_lstmap(NULL, ft_myfunction, ft_del);
+	if (new == NULL)
+    	printf("Lista NULL:    OK\n");
+	else
+    	printf("Lista NULL:    ERRO\n");
+
+	new = ft_lstmap(lista1, NULL, ft_del);
+	if (new == NULL)
+    	printf("Funcao NULL:   OK\n");
+	else
+    	printf("Funcao NULL:   ERRO\n");
+
+	new = ft_lstmap(lista1, ft_myfunction, NULL);
+	if (new == NULL)
+    	printf("Del NULL:      OK\n");
+	else
+    	printf("Del NULL:      ERRO\n");
+
+    ft_lstclear(&new, ft_del);
+    ft_lstclear(&lista1, ft_del);
+    return (0);
 }

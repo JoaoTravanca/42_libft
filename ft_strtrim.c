@@ -3,29 +3,14 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strtrim.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: jtravanca <jtravanca@student.42.fr>        +#+  +:+       +#+        */
+/*   By: jtravanc <jtravanc@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/04/21 18:36:26 by jtravanc          #+#    #+#             */
-/*   Updated: 2026/05/04 19:31:26 by jtravanca        ###   ########.fr       */
+/*   Updated: 2026/05/05 17:22:05 by jtravanc         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-
-static char	*ft_strncpy_custom(char *dest, const char *src, size_t start, size_t end)
-{
-	size_t	i;
-
-	i = 0;
-	while (src[start] && start <= end)
-	{
-		dest[i] = src[start];
-		start++;
-		i++;
-	}
-	dest[i] = '\0';
-	return (dest);
-}
 
 char	*ft_strtrim(char const *s1, char const *set)
 {
@@ -48,12 +33,11 @@ char	*ft_strtrim(char const *s1, char const *set)
 	new = malloc(sizeof(char) * (end - start + 1));
 	if (!new)
 		return (NULL);
-	new = ft_substr (s1, start, ft_strlen (new));
-	return (ft_strncpy_custom(new, s1, start, end - 1));
+	new = ft_substr (s1, start, end - 1);
+	return (new);
 }
 
-/* #include <stdio.h>
-int main (void)
+/* int main (void)
 {
     char *str = "abchellobca";
     char *set = "abbbccbaaabbccaaccbaa";
@@ -66,5 +50,4 @@ int main (void)
     printf("new: %s\n", new);
     free(new);
     return (0);
-}
- */
+} */

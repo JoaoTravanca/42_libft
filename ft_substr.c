@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_substr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: jtravanca <jtravanca@student.42.fr>        +#+  +:+       +#+        */
+/*   By: jtravanc <jtravanc@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/04/21 15:07:00 by jtravanc          #+#    #+#             */
-/*   Updated: 2026/05/04 19:36:22 by jtravanca        ###   ########.fr       */
+/*   Updated: 2026/05/05 15:36:56 by jtravanc         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,9 +34,7 @@ char	*ft_substr(char const *s, unsigned int start, size_t len)
 	return (dst);
 }
 
- #include <stdio.h>
-
-int main (void)
+/* int main (void)
 {
     char *str = "Ola bom dia";
     int start = 5;
@@ -48,4 +46,4 @@ int main (void)
 
     free (str);
     return (0);
-}
+} */
