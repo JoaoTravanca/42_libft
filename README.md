@@ -69,6 +69,4 @@ Make sure `libft.a` and `libft.h` are accessible from your project directory (or
 
 ### AI Usage
 
-- **Google Gemini** and **Claude Code (Sonnet 4.6)** were used to obtain visual explanations and examples of how **linked lists** and **pointers** work in C, helping to build a clearer mental model before implementing the bonus functions.
-
-AI was not used to write any code directly. It was strictly used as a learning and visualization tool to better understand the underlying concepts.
+- **Google Gemini** and **Claude Code (Sonnet 4.6)** were used to obtain visual explanations and examples of how **linked lists** and **pointers** work in C, helping to build a clearer mental model before implementing the functions.
