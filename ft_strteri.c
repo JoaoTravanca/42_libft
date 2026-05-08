@@ -1,30 +1,41 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_putstr_fd.c                                     :+:      :+:    :+:   */
+/*   ft_strteri.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: jtravanc <jtravanc@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2026/04/27 16:24:09 by jtravanc          #+#    #+#             */
-/*   Updated: 2026/05/08 14:58:55 by jtravanc         ###   ########.fr       */
+/*   Created: 2026/05/08 13:35:46 by jtravanc          #+#    #+#             */
+/*   Updated: 2026/05/08 14:02:14 by jtravanc         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	ft_putstr_fd(char *s, int fd)
+/* static void ft_test(unsigned int i, char *c)
 {
-	while (*s)
+    if (i % 2 == 0 && (*c >= 'a' && *c <= 'z'))
+        *c -= 32;
+} */
+void	ft_striteri(char *s, void (*f)(unsigned int, char*))
+{
+	int	i;
+
+	i = 0;
+	if (!s)
+		return ;
+	while (s[i])
 	{
-		if (!s)
-			return ;
-		write(fd, s, 1);
-		s++;
+		f(i, &s[i]);
+		i++;
 	}
 }
 
 /* int main (void)
 {
-	ft_putstr_fd ("Ola mundo", 1);
+	char str[] = "ola mundo";
+	printf("string antes %s\n", str);
+	ft_striteri(str, ft_test);
+	printf("string depois %s\n", str);
 	return (0);
 } */

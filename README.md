@@ -1,4 +1,4 @@
-*This project has been created as part of the 42 curriculum by **jtravanc***
+*This project has been created as part of the 42 curriculum by jtravanc*
 
 ---
 
@@ -55,8 +55,6 @@ To use `libft` in another C project, link it at compilation time:
 cc your_file.c -L. -lft -I. -o your_program
 ```
 
-Make sure `libft.a` and `libft.h` are accessible from your project directory (or adjust the `-L` and `-I` flags accordingly).
-
 ---
 
 ## Resources
@@ -64,8 +62,7 @@ Make sure `libft.a` and `libft.h` are accessible from your project directory (or
 ### References
 
 - [W3Schools — C Programming](https://www.w3schools.com/) — Used to study and reinforce concepts such as linked lists and dynamic memory allocation.
-- [GNU C Library Documentation](https://www.gnu.org/software/libc/manual/) — Official reference for the original `libc` function specifications and behavior.
-- [cppreference.com — C Standard Library](https://en.cppreference.com/w/c) — Detailed documentation on standard C functions used as a reference during reimplementation.
+- [Stack Overflow](https://stackoverflow.com/questions) — Used to answer some questions that I had during the project.
 
 ### AI Usage
 

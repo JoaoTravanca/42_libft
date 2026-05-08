@@ -6,7 +6,7 @@
 /*   By: jtravanc <jtravanc@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/04/27 16:36:46 by jtravanc          #+#    #+#             */
-/*   Updated: 2026/04/30 19:00:59 by jtravanc         ###   ########.fr       */
+/*   Updated: 2026/05/08 14:25:06 by jtravanc         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,6 +15,7 @@
 void	ft_putnbr_fd(int n, int fd)
 {
 	long	nb;
+	char	c;
 
 	nb = n;
 	if (nb < 0)
@@ -26,8 +27,8 @@ void	ft_putnbr_fd(int n, int fd)
 	{
 		ft_putnbr_fd(nb / 10, fd);
 	}
-	nb = (nb % 10) + '0';
-	write(fd, &nb, 1);
+	c = (nb % 10) + '0';
+	write(fd, &c, 1);
 }
 
 /* int main (void)

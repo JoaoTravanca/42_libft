@@ -6,15 +6,25 @@
 /*   By: jtravanc <jtravanc@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/04/24 17:51:44 by jtravanc          #+#    #+#             */
-/*   Updated: 2026/05/04 15:49:56 by jtravanc         ###   ########.fr       */
+/*   Updated: 2026/05/08 13:52:26 by jtravanc         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-/* static char *ft_test (unsigned int i, char c)
+/* static char ft_test(unsigned int i, char c)
 {
-	char *arr;
+    if (i % 2 == 0)
+    {
+        if (c >= 'a' && c <= 'z')
+            return (c - 32);
+    }
+    else
+    {
+        if (c >= 'A' && c <= 'Z')
+            return (c + 32);
+    }
+    return (c);
 } */
 
 char	*ft_strmapi(char const *s, char (*f)(unsigned int, char))
@@ -37,11 +47,19 @@ char	*ft_strmapi(char const *s, char (*f)(unsigned int, char))
 	return (new);
 }
 
-/* int main (void)
+/* int main(void)
 {
-    char    *arr;
-    char    *new;
+    char *str = "abcdef";
+    char *resultado;
 
-    new = ft_strmapi(arr)
-    
+    printf("Original: %s\n", str);
+    resultado = ft_strmapi(str, ft_test);
+
+    if (resultado)
+    {
+        printf("Resultado: %s\n", resultado);
+        free(resultado);
+    }
+
+    return (0);
 } */

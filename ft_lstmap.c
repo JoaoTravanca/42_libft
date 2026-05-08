@@ -6,13 +6,13 @@
 /*   By: jtravanc <jtravanc@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/04/29 15:30:17 by jtravanc          #+#    #+#             */
-/*   Updated: 2026/05/05 18:30:31 by jtravanc         ###   ########.fr       */
+/*   Updated: 2026/05/08 13:18:29 by jtravanc         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-static void	*ft_myfunction(void *content)
+/* static void	*ft_myfunction(void *content)
 {
 	char	*str;
 	int	i;
@@ -34,7 +34,7 @@ static void	*ft_myfunction(void *content)
 static void	ft_del(void *content)
 {
 	free(content);
-}
+} */
 
 t_list	*ft_lstmap(t_list *lst, void *(*f)(void *), void (*del)(void *))
 {
@@ -59,7 +59,7 @@ t_list	*ft_lstmap(t_list *lst, void *(*f)(void *), void (*del)(void *))
 	return (new);
 }
 
-int main(void)
+/* int main(void)
 {
     t_list *lista1 = ft_lstnew(ft_strdup("Hello"));
     t_list *lista2 = ft_lstnew(ft_strdup("World"));
@@ -110,4 +110,4 @@ int main(void)
     ft_lstclear(&new, ft_del);
     ft_lstclear(&lista1, ft_del);
     return (0);
-}
+} */
