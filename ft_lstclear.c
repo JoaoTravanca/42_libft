@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_lstclear.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: jtravanc <jtravanc@student.42.fr>          +#+  +:+       +#+        */
+/*   By: jtravanca <jtravanca@student.42.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/04/29 15:29:32 by jtravanc          #+#    #+#             */
-/*   Updated: 2026/05/01 17:34:38 by jtravanc         ###   ########.fr       */
+/*   Updated: 2026/05/10 19:10:59 by jtravanca        ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,7 +21,7 @@ void	ft_lstclear(t_list **lst, void (*del)(void*))
 {
 	t_list	*temp;
 
-	if (!lst || !*lst)
+	if (!lst || !*lst || !del)
 		return ;
 	while (*lst != NULL)
 	{

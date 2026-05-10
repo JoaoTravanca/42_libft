@@ -6,7 +6,7 @@
 /*   By: jtravanca <jtravanca@student.42.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/04/14 14:18:41 by jtravanc          #+#    #+#             */
-/*   Updated: 2026/05/09 21:09:19 by jtravanca        ###   ########.fr       */
+/*   Updated: 2026/05/10 19:22:48 by jtravanca        ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,11 +16,11 @@ void	*ft_memcpy(void *dest, const void *src, size_t n)
 {
 	unsigned char	*dest2;
 	unsigned char	*src2;
-
+	
+	if (!dest && !src)
+		return (NULL);
 	dest2 = (unsigned char *)dest;
 	src2 = (unsigned char *)src;
-	if (!dest || !src)
-		return (NULL);
 	while (n)
 	{
 		*dest2 = *src2;

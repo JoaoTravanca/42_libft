@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_lstadd_front.c                                  :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: jtravanc <jtravanc@student.42.fr>          +#+  +:+       +#+        */
+/*   By: jtravanca <jtravanca@student.42.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/04/27 17:07:55 by jtravanc          #+#    #+#             */
-/*   Updated: 2026/05/04 15:52:50 by jtravanc         ###   ########.fr       */
+/*   Updated: 2026/05/10 19:09:58 by jtravanca        ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,6 +14,8 @@
 
 void	ft_lstadd_front(t_list **lst, t_list *new)
 {
+	if (!lst || !new)
+        return ;
 	new -> next = *lst;
 	*lst = new;
 }
