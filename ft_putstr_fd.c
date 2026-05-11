@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_putstr_fd.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: jtravanca <jtravanca@student.42.fr>        +#+  +:+       +#+        */
+/*   By: jtravanc <jtravanc@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/04/27 16:24:09 by jtravanc          #+#    #+#             */
-/*   Updated: 2026/05/10 19:30:06 by jtravanca        ###   ########.fr       */
+/*   Updated: 2026/05/11 10:53:24 by jtravanc         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,6 @@ void	ft_putstr_fd(char *s, int fd)
 		return ;
 	while (*s)
 	{
-
 		write(fd, s, 1);
 		s++;
 	}
