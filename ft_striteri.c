@@ -1,12 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strteri.c                                       :+:      :+:    :+:   */
+/*   ft_striteri.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: jtravanca <jtravanca@student.42.fr>        +#+  +:+       +#+        */
+/*   By: jtravanc <jtravanc@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/05/08 13:35:46 by jtravanc          #+#    #+#             */
-/*   Updated: 2026/05/10 19:39:23 by jtravanca        ###   ########.fr       */
+/*   Updated: 2026/05/14 17:56:08 by jtravanc         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,7 +35,7 @@ void	ft_striteri(char *s, void (*f)(unsigned int, char*))
 {
 	char str[] = "ola mundo";
 	printf("string antes %s\n", str);
-	ft_striteri(str, ft_test);
+	ft_striteri(str, ft_memset);
 	printf("string depois %s\n", str);
 	return (0);
 } */

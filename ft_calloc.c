@@ -6,7 +6,7 @@
 /*   By: jtravanc <jtravanc@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/04/20 17:35:39 by jtravanc          #+#    #+#             */
-/*   Updated: 2026/05/08 13:17:52 by jtravanc         ###   ########.fr       */
+/*   Updated: 2026/05/14 16:33:04 by jtravanc         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,8 +19,7 @@ void	*ft_calloc(size_t nmemb, size_t size)
 
 	if (nmemb == 0 || size == 0)
 	{
-		nmemb = 1;
-		size = 1;
+		return (malloc(0));
 	}
 	if (nmemb > ((size_t)-1 / size))
 		return (NULL);
